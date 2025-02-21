@@ -8,14 +8,15 @@ use App\Models\Client;
 
 class ClientController extends Controller
 {
-    // Lister les clients
+    // Lister les clients dans un fichier Json
     public function index(){
         $clients = Client::all();
         return response()->json($clients);
     }
 
-    // Récupérer le client par son numéro
+    // Récupérer le client par son numéro dans un fichier Json
     public function show($id){
+        // Trouver le client avec la méthode find()
         $client = Client::find($id);
 
         // Effectuer un retour 404 si le client n'existe pas
@@ -27,7 +28,7 @@ class ClientController extends Controller
         return response()->json($client);
     }
 
-    // Créer un nouveau client
+    // Créer un nouveau client dans un fichier Json
     public function store(Request $request){
         $request->validate([
             'nom' => 'required',
@@ -44,12 +45,10 @@ class ClientController extends Controller
     }
 
 
-    // Mettre à jour un client
+    // Mettre à jour un client dans un fichier Json
     public function update(Request $request, $id){
-        // trouver le client
         $client = Client::find($id);
 
-        // Effectuer un retour 404 si le client n'existe pas
         if(!$client){
             return response()->json(["message"=> "Client non trouvé !"],404);
         }
@@ -59,14 +58,14 @@ class ClientController extends Controller
         return response()->json($client);
     }
 
-    // Supprimer un client
+    // Supprimer un client dans un fichier Json
     public function destroy($id){
         $client = Client::find($id);
 
-        // Effectuer un retour 404 si le client n'existe pas
         if(!$client){
             return response()->json(["message"=> "Client non trouvé !"],404);
         }
+        //Efface le client
         $client->delete();
         return response()->json(["message"=> "Client supprimé !"]);
     }

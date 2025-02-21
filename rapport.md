@@ -28,7 +28,7 @@ Puis on ajoute chaque route avec son __mode d'utilisation__ (put, get, post...),
 
 ### Test avec Postman
 En allant sur Postman, il m'a été possible de tester si l'Api fonctionnait bien et renvoyait bien les bonnes données dans un fichier Json.
-Par exemple en entrant l'URL : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1``` et en choisissant la méthode GET, Postman renvoie les données du client 1 : 
+Par exemple en entrant l'URL : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1``` et en choisissant la méthode __GET__, Postman renvoie les données du _client 1_ : 
 ```json
 {
     "NumeroClient": 1,
@@ -42,13 +42,13 @@ Par exemple en entrant l'URL : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdut
     "updated_at": "2025-02-13T09:13:07.000000Z"
 }
 ```
-Si le client n'existe pas comme le 15, Postman renvoie le message suivant :
+Si le client _n'existe pas_ comme le 15, Postman renvoie le message suivant :
 ```json
 {
     "message": "Client non trouvé !"
 }
 ```
-Pour une méthode POST, on peut entrer l'URL ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/store``` avec toutes les données dans les Query params qui s'ajoutent à cette URL à la fin pour donner l'URL suivante : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/store?NumeroClient=12&nom=Dutournier&prenom=Candice&age=19&adresse=9 impasse armantiou, dax&email=moi@gmail.com&carteBancaire=1234567891234567```. Cette méthode va retourner le Json suivant :
+Pour une méthode __POST__, on peut entrer l'URL ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/store``` avec toutes les données dans les __Query params__ qui s'ajoutent à cette URL à la fin pour donner l'URL suivante : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/store?NumeroClient=12&nom=Dutournier&prenom=Candice&age=19&adresse=9 impasse armantiou, dax&email=moi@gmail.com&carteBancaire=1234567891234567```. Cette méthode va retourner le Json suivant :
 ```json
 {
     "nom": "Dutournier",
@@ -62,7 +62,7 @@ Pour une méthode POST, on peut entrer l'URL ```http://lakartxela.iutbayonne.uni
     "numeroClient": 12
 }
 ```
-Pour une méthode PUT, on entre l'URL ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1``` qui appelle la méthode permettant de modifier un client (ici le numéro 1), on modifie les paramètres (sauf le numéro du client) dans les Query params ce qui donne l'URL suivante : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1?nom=Bal&prenom=Bu&age=23&adresse=5 rue de la paix, paris&email=Bal@gmail.com&carteBancaire=1234567891234567```. Cette méthode retourne le Json suivant :
+Pour une méthode __PUT__, on entre l'URL ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1``` qui appelle la méthode permettant de __modifier__ un client (ici le _numéro 1_), on modifie les paramètres (__sauf__ le _numéro du client_) dans les __Query params__ ce qui donne l'URL suivante : ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1?nom=Bal&prenom=Bu&age=23&adresse=5 rue de la paix, paris&email=Bal@gmail.com&carteBancaire=1234567891234567```. Cette méthode retourne le Json suivant :
 ```json
 {
     "NumeroClient": 1,
@@ -76,7 +76,7 @@ Pour une méthode PUT, on entre l'URL ```http://lakartxela.iutbayonne.univ-pau.f
     "updated_at": "2025-02-21T11:19:54.000000Z"
 }
 ```
-Pour la méthode DELETE, on entre l'URL ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1```, ce qui va supprimer le client 1. Cette méthode retourne le Json suivant :
+Pour la méthode __DELETE__, on entre l'URL ```http://lakartxela.iutbayonne.univ-pau.fr/~cdutourni001/Laravel/TD1/public/api/clients/1```, ce qui va __supprimer__ le _client 1_. Cette méthode retourne le Json suivant :
 ```json
 {
     "message": "Client supprimé !"

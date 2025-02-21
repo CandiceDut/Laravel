@@ -15,6 +15,14 @@
                 <input type="text" name="prenom" id="prenom" class="form-control" value="{{ old('prenom', $client->prenom) }}" required>
             </div>
             <div class="form-group">
+                <label for="age">Age :</label>
+                <input type="text" name="age" id="age" class="form-control" value="{{ old('age', $client->age) }}" required>
+            </div>
+            <div class="form-group">
+                <label for="adresse">Adresse :</label>
+                <input type="text" name="adresse" id="adresse" class="form-control" value="{{ old('adresse', $client->adresse) }}" required>
+            </div>
+            <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" name="email" id="email" class="form-control" value="{{ old('email', $client->email) }}" required>
             </div>

@@ -18,7 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Chemin d'accès au controller client version API
 use App\Http\Controllers\Api\ClientController;
+//Mise en place des routes
 Route::get('/clients',[ClientController::class,'index']);
 Route::get('/clients/{id}',[ClientController::class,'show']);
 Route::get('/clients/create',[ClientController::class,'create']);

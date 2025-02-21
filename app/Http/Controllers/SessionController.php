@@ -7,25 +7,19 @@ use Illuminate\Support\Facades\Auth;
 
 class SessionController extends Controller
 {
-    /**
-     * Display a listing of the resource 
-     */
+    //Liste les informations de l'utilisateur
     public function index()
     {
         return view('sessions.index');
     }
 
-    /**
-     * Show the form for creating a new resource (Page de connexion).
-     */
+    //Connecte l'utilisateur
     public function create()
     {
         return view('auth.login');
     }
 
-    /**
-     * Store a newly created resource in storage (Effectuer la connexion).
-     */
+    //Effectue la connexion
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -40,17 +34,13 @@ class SessionController extends Controller
         return back()->withErrors(['email' => 'Les identifiants fournis sont incorrects.']);
     }
 
-    /**
-     * Display the specified resource (Afficher les détails de la session active).
-     */
+    //Affiche plus de détails sur l'utilisateur
     public function show(string $id)
     {
         return view('sessions.show', ['user' => Auth::user()]);
     }
 
-    /**
-     * Show the form for editing the specified resource (Modifier les paramètres de la session).
-     */
+    //Modifie l'utilisateur
     public function edit(string $id)
     {
     
@@ -58,9 +48,7 @@ class SessionController extends Controller
     }
 
 
-    /**
-     * Remove the specified resource from storage (Se déconnecter de la session).
-     */
+    //Déconnecte l'utilisateur
     public function destroy(string $id)
     {
         Auth::logout();
