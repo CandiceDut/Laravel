@@ -62,6 +62,8 @@ class ClientController extends Controller
     // Supprimer un client
     public function destroy($id){
         $client = Client::find($id);
+
+        // Effectuer un retour 404 si le client n'existe pas
         if(!$client){
             return response()->json(["message"=> "Client non trouvé !"],404);
         }

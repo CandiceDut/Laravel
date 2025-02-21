@@ -22,6 +22,9 @@ class ClientController extends Controller
     {
         $request->validate([
             'nom' => 'required',
+            'prenom' => 'required',
+            'age' => 'required',
+            'adresse' => 'required',
             'email' => 'required|email',
             'carteBancaire' => 'required',
         ]);
@@ -48,6 +51,8 @@ class ClientController extends Controller
         $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
+            'age' => 'required',
+            'adresse' => 'required',
             'email' => 'required|email',
             'carteBancaire' => 'required',
         ]);
