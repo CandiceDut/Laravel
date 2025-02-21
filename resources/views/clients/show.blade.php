@@ -11,6 +11,8 @@
                     <th>ID</th>
                     <th>Nom</th>
                     <th>Prenom</th>
+                    <th>Age</th>
+                    <th>Adresse</th>
                     <th>Email</th>
                     <th>Carte Bancaire</th>
                 </tr>
@@ -20,6 +22,8 @@
                         <td>{{ $client->NumeroClient }}</td>
                         <td>{{ $client->nom }}</td>
                         <td>{{ $client->prenom }}</td>
+                        <td>{{ $client->age }}</td>
+                        <td>{{ $client->adresse }}</td>
                         <td>{{ $client->email }}</td>
                         <td>{{ $client->carteBancaire }}</td>
                     </tr>

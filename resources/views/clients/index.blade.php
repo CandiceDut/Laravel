@@ -11,7 +11,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Nom</th>
-                    <th>Prenom</th>
                     <th>Email</th>
                     <th>Carte Bancaire</th>
                 </tr>
@@ -21,7 +20,6 @@
                     <tr>
                         <td>{{ $client->NumeroClient }}</td>
                         <td>{{ $client->nom }}</td>
-                        <td>{{ $client->prenom }}</td>
                         <td>{{ $client->email }}</td>
                         <td>{{ $client->carteBancaire }}</td>
 

@@ -17,13 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\ClientController;
-Route::get('clients', [ClientController::class,'index'])->name('clients.index');
-Route::get('clients/{numeroClient}', [ClientController::class, 'show'])->name('clients.show');
-Route::get('clients/{numeroClient}/edit', [ClientController::class, 'edit'])->name('clients.edit');
-Route::delete('clients/{numeroClient}', [ClientController::class, 'destroy'])->name('clients.destroy');
-Route::get('/create', [ClientController::class, 'create'])->name('clients.create');
-Route::post('/store', [ClientController::class, 'store'])->name('clients.store');
+// use App\Http\Controllers\ClientController;
+// Route::get('clients', [ClientController::class,'index'])->name('clients.index');
+// Route::get('clients/{numeroClient}', [ClientController::class, 'show'])->name('clients.show');
+// Route::get('clients/{numeroClient}/edit', [ClientController::class, 'edit'])->name('clients.edit');
+// Route::delete('clients/{numeroClient}', [ClientController::class, 'destroy'])->name('clients.destroy');
+// Route::get('/create', [ClientController::class, 'create'])->name('clients.create');
+// Route::post('/store', [ClientController::class, 'store'])->name('clients.store');
 
 Auth::routes();
 
